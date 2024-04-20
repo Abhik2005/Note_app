@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Todo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-full h-screen bg-zinc-900 p-10">
+        <form action="/todo/update/<%= title %>" method="post">
+            <input  class="block w-full outline-none rounded-md p-2" placeholder="Enter title of Todo"  type="text" name="title" value="<%= title %>">
+            <textarea class="w-full p-3 resize-none outline-none rounded-md mb-2 mt-2" name="details" placeholder="add details..."><%= fileData %></textarea>
+            <input class="px-3 py-2 bg-blue-500 rounded-md" type="submit" value="Update">
+        </form>
+    </div>
+</body>
+</html>
